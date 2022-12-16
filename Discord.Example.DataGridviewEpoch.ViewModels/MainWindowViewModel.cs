@@ -3,7 +3,6 @@
 namespace Discord.Example.DataGridviewEpoch.ViewModels;
 public class MainWindowViewModel
 {
-
     public MainWindowViewModel()
     {
         MyTable = new DataTable();
@@ -17,6 +16,8 @@ public class MainWindowViewModel
             myRow["Name"] = $"Row: {row + 1}";
             myRow["DateTime"] = DateTimeOffset.Now.ToUnixTimeSeconds();
             MyTable.Rows.Add(myRow);
+
+            Thread.Sleep(1000);
         }
     }
 
